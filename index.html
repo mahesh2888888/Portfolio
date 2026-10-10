@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Thammineni Mahesh | Java Developer Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f7f8fc;--card:#fff;--text:#1c2033;--muted:#5f667d;--pri:#4f46e5;--acc:#06b6d4;--bd:#e6e8f2;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e1020;--card:#171a30;--text:#eef0fb;--muted:#a3a9c6;--pri:#818cf8;--acc:#22d3ee;--bd:#262a47}}
+:root[data-theme="dark"]{--bg:#0e1020;--card:#171a30;--text:#eef0fb;--muted:#a3a9c6;--pri:#818cf8;--acc:#22d3ee;--bd:#262a47}
+html{scroll-behavior:smooth;scroll-padding-top:calc(70px + env(safe-area-inset-top,0px))}
+*{box-sizing:border-box;margin:0}
+body{background:var(--bg);color:var(--text);font:16px/1.7 Inter,system-ui,sans-serif;overflow-x:hidden}
+h1,h2,h3{font-family:Poppins,system-ui,sans-serif;line-height:1.25}
+a{color:inherit;text-decoration:none}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:color-mix(in srgb,var(--bg) 85%,transparent);backdrop-filter:blur(12px);border-bottom:1px solid var(--bd)}
+.nav{max-width:1100px;margin:auto;padding:12px 20px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.logo{font:700 20px Poppins;color:var(--pri)}
+.links{display:flex;gap:4px;flex-wrap:wrap}
+.links a{padding:6px 12px;border-radius:99px;font-size:14px;color:var(--muted);transition:.2s}
+.links a:hover{background:var(--pri);color:#fff}
+#theme{border:1px solid var(--bd);background:var(--card);color:var(--text);border-radius:99px;width:38px;height:38px;cursor:pointer;font-size:16px}
+@media(max-width:860px){.nav{flex-direction:column}.links{justify-content:center}.links a{padding:4px 9px;font-size:13px}}
+section{max-width:1100px;margin:auto;padding:80px 20px}
+.title{font-size:clamp(26px,4vw,34px);margin-bottom:8px}
+.title::after{content:"";display:block;width:56px;height:4px;border-radius:4px;background:linear-gradient(90deg,var(--pri),var(--acc));margin-top:10px}
+.sub{color:var(--muted);margin-bottom:36px}
+.hero{display:grid;grid-template-columns:1.3fr 1fr;gap:40px;align-items:center;min-height:85vh}
+.hi{color:var(--pri);font-weight:600}
+.hero h1{font-size:clamp(34px,6vw,56px);margin:6px 0}
+.grad{background:linear-gradient(90deg,var(--pri),var(--acc));-webkit-background-clip:text;background-clip:text;color:transparent}
+.role{font:600 clamp(18px,3vw,24px) Poppins;min-height:36px}
+.role span{border-right:2px solid var(--pri);padding-right:4px;animation:blink .8s infinite}
+@keyframes blink{50%{border-color:transparent}}
+.hero p{color:var(--muted);margin:14px 0 26px;max-width:520px}
+.btn{display:inline-block;padding:12px 24px;border-radius:12px;border:2px solid var(--pri);cursor:pointer;font:600 15px Inter;transition:.25s;margin:0 8px 8px 0}
+.btn.p{background:var(--pri);color:#fff}
+.btn:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(79,70,229,.3)}
+.btn.o{background:transparent;color:var(--pri)}
+.avatar-wrap{position:relative;width:min(320px,80%);aspect-ratio:1;margin:auto}
+.avatar-wrap::before{content:"";position:absolute;inset:-12px;border-radius:50%;background:conic-gradient(var(--pri),var(--acc),var(--pri));animation:spin 6s linear infinite;filter:blur(2px)}
+@keyframes spin{to{transform:rotate(360deg)}}
+.avatar{position:relative;width:100%;height:100%;border-radius:50%;background:linear-gradient(135deg,var(--pri),var(--acc));display:grid;place-items:center;font:700 clamp(60px,12vw,96px) Poppins;color:#fff;overflow:hidden;border:6px solid var(--bg);animation:float 4s ease-in-out infinite}
+.avatar img{width:100%;height:100%;object-fit:cover;object-position:center 20%}
+@keyframes float{50%{transform:translateY(-10px)}}
+.upl{display:block;text-align:center;font-size:12px;color:var(--muted);margin-top:22px;cursor:pointer}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:18px;padding:24px;transition:.3s}
+.card:hover{transform:translateY(-6px);box-shadow:0 16px 36px rgba(79,70,229,.15);border-color:var(--pri)}
+.card h3{font-size:18px;margin-bottom:8px}
+.card p{color:var(--muted);font-size:15px}
+.ico{font-size:28px;margin-bottom:10px;display:block}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:start}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.stat{text-align:center}.stat b{display:block;font:700 32px Poppins;color:var(--pri)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.chip{padding:6px 14px;border-radius:99px;background:color-mix(in srgb,var(--pri) 12%,transparent);color:var(--pri);font-size:13px;font-weight:600}
+.cert{display:flex;gap:14px;align-items:center}
+.cert .ico{margin:0}
+.resume{text-align:center;max-width:700px;margin:auto}
+.contact{max-width:640px;margin:auto}
+.crow{display:flex;gap:16px;align-items:center;padding:16px 0;border-bottom:1px solid var(--bd)}
+.crow .ico{margin:0;width:50px;height:50px;border-radius:14px;display:grid;place-items:center;background:color-mix(in srgb,var(--pri) 12%,transparent);font-size:22px}
+.crow small{color:var(--muted);display:block}
+footer{text-align:center;color:var(--muted);padding:30px 20px;border-top:1px solid var(--bd);font-size:14px}
+.rv{opacity:0;transform:translateY(34px);transition:opacity .7s,transform .7s}
+.rv.in{opacity:1;transform:none}
+@media(max-width:800px){.hero,.about{grid-template-columns:1fr}.hero{text-align:center;min-height:auto;padding-top:40px}.hero p{margin-inline:auto}.avatar-wrap{order:-1;width:min(240px,70%)}section{padding:60px 20px}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+@media print{body *{visibility:hidden}#resume,#resume *{visibility:visible}#resume{position:absolute;left:0;top:0;width:100%}.btn{display:none}}
+</style>
+</head>
+<body>
+<nav><div class="nav">
+<a href="#home" class="logo">Mahesh.dev</a>
+<div class="links"><a href="#home">Home</a><a href="#about">About</a><a href="#skills">Skills</a><a href="#education">Education</a><a href="#projects">Projects</a><a href="#certs">Certifications</a><a href="#resume">Resume</a><a href="#contact">Contact</a></div>
+<button id="theme" aria-label="Toggle theme">🌓</button>
+</div></nav>
+
+<section id="home"><div class="hero">
+<div class="rv">
+<span class="hi">👋 Hello, I'm</span>
+<h1><span class="grad">Thammineni Mahesh</span></h1>
+<div class="role"><span id="typed"></span></div>
+<p>B.Tech CSE student at GITAM University, Bengaluru, passionate about building clean, reliable software and aspiring to start my career as a Java Developer.</p>
+<a href="#projects" class="btn p">View Projects</a><a href="#contact" class="btn o">Contact Me</a>
+</div>
+<div class="rv">
+<div class="avatar-wrap"><div class="avatar" id="av"><img alt="Thammineni Mahesh" src="C:\Users\thamm\OneDrive\Desktop\Mahesh Portfolio\Thammineni Mahesh.jpeg"></div></div>
+</div>
+</div></section>
+
+<section id="about"><h2 class="title rv">About Me</h2><p class="sub rv">A little about who I am</p>
+<div class="about">
+<div class="rv"><p>I am a Computer Science Engineering student with a strong foundation in Java, web development and SQL. I enjoy solving problems, learning new technologies and turning ideas into working applications.</p><br><p>My projects span machine learning, computer vision and web development. My goal is to grow as a Java Developer, writing clean, scalable code and contributing to real-world products.</p></div>
+<div class="stats rv"><div class="card stat"><b>3</b>Projects</div><div class="card stat"><b>5</b>Certifications</div><div class="card stat"><b>6</b>Core Skills</div><div class="card stat"><b>☕</b>Java Focus</div></div>
+</div></section>
+
+<section id="skills"><h2 class="title rv">Skills</h2><p class="sub rv">Technologies I work with</p>
+<div class="grid">
+<div class="card rv"><span class="ico">☕</span><h3>Backend</h3><p>Core programming and database skills.</p><div class="chips"><span class="chip">Java</span><span class="chip">SQL</span></div></div>
+<div class="card rv"><span class="ico">🎨</span><h3>Frontend</h3><p>Responsive, interactive user interfaces.</p><div class="chips"><span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">JavaScript</span><span class="chip">React</span></div></div>
+<div class="card rv"><span class="ico">🧠</span><h3>Learning &amp; Growth</h3><p>Strengthening problem-solving and ML basics.</p><div class="chips"><span class="chip">Problem Solving</span><span class="chip">Machine Learning</span></div></div>
+</div></section>
+
+<section id="education"><h2 class="title rv">Education</h2><p class="sub rv">My academic background</p>
+<div class="card rv" style="border-left:5px solid var(--pri)"><h3>B.Tech – Computer Science &amp; Engineering</h3><p>GITAM University, Bengaluru</p><div class="chips"><span class="chip">Graduated</span></div></div>
+</section>
+
+<section id="projects"><h2 class="title rv">Projects</h2><p class="sub rv">Things I've built</p>
+<div class="grid">
+<div class="card rv"><span class="ico">🦌</span><h3>Wildlife Intrusion Detection in Farms</h3><p>Detects wild animals entering farmland using a Vision Transformer to help protect crops.</p><div class="chips"><span class="chip">Vision Transformer</span><span class="chip">Deep Learning</span></div></div>
+<div class="card rv"><span class="ico">🍲</span><h3>Food Blog</h3><p>A responsive food blog website with clean layouts and engaging content presentation.</p><div class="chips"><span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">JavaScript</span></div></div>
+<div class="card rv"><span class="ico">🚗</span><h3>Intrusion Detection for In-Vehicle Networks</h3><p>A machine learning based system to identify malicious activity on in-vehicle networks.</p><div class="chips"><span class="chip">Machine Learning</span><span class="chip">Security</span></div></div>
+</div></section>
+
+<section id="certs"><h2 class="title rv">Certifications</h2><p class="sub rv">Courses I've completed</p>
+<div class="grid">
+<div class="card cert rv"><span class="ico">🏅</span><h3>C Programming – Coursera</h3></div>
+<div class="card cert rv"><span class="ico">🏅</span><h3>Machine Learning Foundation &amp; Certification</h3></div>
+<div class="card cert rv"><span class="ico">🏅</span><h3>Full Stack Web Development</h3></div>
+<div class="card cert rv"><span class="ico">🏅</span><h3>Explore Machine Learning Using Python</h3></div>
+<div class="card cert rv"><span class="ico">🏅</span><h3>Effective Problem-Solving &amp; Decision-Making</h3></div>
+</div></section>
+
+<section id="resume"><div class="resume card rv"><span class="ico">📄</span><h2 class="title" style="display:inline-block">Resume</h2>
+<p class="sub">Thammineni Mahesh · Aspiring Java Developer</p>
+<p><b>Education:</b> B.Tech CSE, GITAM University, Bengaluru<br><b>Skills:</b> Java, HTML, CSS, JavaScript, React, SQL<br><b>Projects:</b> Wildlife Intrusion Detection (ViT), Food Blog, In-Vehicle Network IDS<br><b>Certifications:</b> 5 completed</p><br>
+<button class="btn p" onclick="window.print()">⬇ Save Resume as PDF</button></div></section>
+
+<section id="contact"><h2 class="title rv" style="text-align:center">Contact</h2><p class="sub rv" style="text-align:center">Let's connect</p>
+<div class="contact card rv">
+<div class="crow"><span class="ico">💬</span><div><small>WhatsApp</small><a href="https://wa.me/919866487971" target="_blank" rel="noopener"><b>+91 98664 87971</b></a></div></div>
+<div class="crow"><span class="ico">📍</span><div><small>Location</small><b>Hyderbad, India</b></div></div>
+<div class="crow" style="border:0"><span class="ico">🎓</span><div><small>College</small><b>GITAM University</b></div></div>
+<br><a class="btn p" href="https://wa.me/919866487971" target="_blank" rel="noopener">Chat on WhatsApp</a>
+</div></section>
+
+<footer>© 2026 Thammineni Mahesh. All rights reserved.</footer>
+
+<script>
+const words=["Java Developer","Full Stack Learner","Problem Solver"];let w=0,c=0,del=false;const t=document.getElementById('typed');
+(function type(){const s=words[w];t.textContent=s.slice(0,c);if(!del&&c===s.length){del=true;return setTimeout(type,1200)}if(del&&c===0){del=false;w=(w+1)%words.length}c+=del?-1:1;setTimeout(type,del?40:90)})();
+const io=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}}),{threshold:.12});
+document.querySelectorAll('.rv').forEach((el,i)=>{el.style.transitionDelay=(i%3)*.1+'s';io.observe(el)});
+document.getElementById('theme').onclick=()=>{const r=document.documentElement;const dark=getComputedStyle(r).getPropertyValue('--bg').trim()==='#0e1020';r.dataset.theme=dark?'light':'dark'};
+</script>
+</body>
+</html>
